@@ -52,9 +52,12 @@ public class MainActivity extends AppCompatActivity {
                         int age = employee.getInt("employee_age");
                         int salary = employee.getInt("employee_salary");
 
-                        my_employee.add(new Employee(name, salary, age));
+                        Toast.makeText(MainActivity.this, String.valueOf(age), Toast.LENGTH_SHORT).show();
+
+                        my_employee.add(new Employee("name", i, i));
                     }
                 } catch (JSONException e) {
+
                     e.printStackTrace();
                 }
             }
@@ -65,11 +68,13 @@ public class MainActivity extends AppCompatActivity {
                 error.printStackTrace();
             }
         });
+//        my_employee.add(new Employee("name", 1111, 25));
 
+
+        queue.add(request);
         EmployeeAdapter adapter = new EmployeeAdapter(my_employee);
         list.setAdapter(adapter);
 
         list.setLayoutManager(new LinearLayoutManager(this));
-        queue.add(request);
     }
 }

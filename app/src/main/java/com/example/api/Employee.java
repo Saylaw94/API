@@ -2,8 +2,8 @@ package com.example.api;
 
 public class Employee {
     private String name;
-    private int salary;
-    private int age;
+    int salary;
+    int age;
 
     public Employee(String name, int salary, int age) {
         this.name = name;
