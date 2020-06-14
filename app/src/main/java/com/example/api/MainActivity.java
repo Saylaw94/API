@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
                         Toast.makeText(MainActivity.this, String.valueOf(age), Toast.LENGTH_SHORT).show();
 
-                        my_employee.add(new Employee("name", i, i));
+                        my_employee.add(new Employee(name, salary, age));
                     }
                 } catch (JSONException e) {
 
